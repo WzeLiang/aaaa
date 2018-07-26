@@ -1,0 +1,138 @@
+/* pages/education/askforleave/leavelist/leavelist.wxss */
+/* pages/education/homework/homework.wxss */
+
+
+.homework{
+  padding: 30rpx;
+}
+.head{
+  position: relative;
+  width: 750rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+.tab-list{
+  position: absolute;
+
+}
+.tab-select{
+ position: absolute;
+
+}
+.tab{
+  width: 100%;
+  transition: all .5s ease;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+}
+.tab .tabbtn{
+  text-align: center;
+}
+.tab .tabbtn  .img{
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: solid 4rpx white;
+  vertical-align: middle;
+}
+.tab .tabbtn .img image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+}
+.tab .class .calssnumb{
+ font-size: 38rpx;
+}
+.tab .class .studentnumb{
+ font-size: 30rpx;
+ margin-top: 10rpx;
+}
+.date{
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.week{
+  
+  text-align: center;
+}
+.week-box{
+  border-left: 1rpx solid rgb(229, 229, 229);
+ border-top: 1rpx solid rgb(229, 229, 229); 
+ border-bottom: 1rpx solid rgb(229, 229, 229);
+ display: flex;
+ font-size: 32rpx;
+}
+.day-box{
+  border-right: 1rpx solid rgb(229, 229, 229);
+  width: 98.5rpx;
+}
+.box-date{
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+  padding: 18rpx 0;
+}
+.box-numb{
+   padding: 18rpx;
+}
+.active{
+  background: rgb(163, 221, 103);
+  color: white;
+}
+
+.homework-content{
+  margin: 20rpx 0;
+  color: rgb(51, 51, 51);
+}
+.homework-item{
+  border-bottom: 1px solid rgb(229, 229, 229);
+  padding: 20rpx 0;
+}
+.item-title{
+  display: flex;
+  justify-content: space-between;
+}
+.item-content{
+ font-size: 32rpx;
+ margin-top: 20rpx;
+}
+.student{
+  display: flex;
+}
+.student-image{
+ margin-right: 10rpx;
+}
+.student-image image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.info-name{
+  font-size: 48rpx;
+}
+.info-time{
+  color: rgb(198, 198, 198);
+  font-size: 35rpx;
+  margin-top: 15rpx;
+}
+.info-name>text{
+   margin-left: 15rpx;
+  font-size: 32rpx;
+  color: rgb(136, 136, 136);
+}
+.subject{
+  color: rgb(163, 221, 103);
+}
+.releasehomework{
+  background: rgb(163, 221, 103);
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  padding: 30rpx 0;
+  bottom: 0;
+  left: 0;
+}

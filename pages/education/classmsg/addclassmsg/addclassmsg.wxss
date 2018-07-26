@@ -1,0 +1,19 @@
+/* pages/education/classmsg/addclassmsg/addclassmsg.wxss */
+.addclassmsg{
+  padding: 30rpx;
+}
+.form-item{
+  display: flex;
+  justify-content: space-between;
+}
+.classmsg-info{
+  margin-top: 40rpx;
+}
+.classmsg-info textarea{
+  border: 1rpx solid rgb(229,229,229);
+  margin-top:20rpx;
+  width: 100%; 
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}

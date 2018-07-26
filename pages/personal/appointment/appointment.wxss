@@ -1,0 +1,95 @@
+/* pages/personal/appointment/appointment.wxss */
+.head{
+  position: relative;
+  width: 750rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+.tab-list{
+  position: absolute;
+
+}
+.tab-select{
+ position: absolute;
+
+}
+.tab{
+  width: 100%;
+  transition: all .5s ease;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+ 
+}
+.sub-forget{
+  position:fixed; 
+  top:985rpx;
+  width: 700rpx;
+}
+.yue{
+  text-align: right;
+  margin: 20rpx;
+  color: blue;
+  font-size: 35rpx;
+
+}
+.tab .tabbtn{
+  text-align: center;
+}
+.tab .tabbtn  .img{
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: solid 4rpx white;
+  vertical-align: middle;
+}
+.pro{
+  width: 80rpx;
+  height:80rpx;
+  border-radius: 40rpx;
+  border: solid 3rpx white;
+  vertical-align: middle;
+}
+.pro image{
+   width: 80rpx;
+  height: 80rpx;
+   vertical-align:middle;
+}
+.tab .tabbtn .img image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+}
+.tab .class1 .calssnumb{
+ font-size: 28rpx;
+ 
+}
+.tab .class1 .studentnumb{
+ font-size: 28rpx;
+ margin-top: 10rpx;
+}
+.tab .class .calssnumb{
+ font-size: 28rpx;
+ 
+}
+.tab .class .studentnumb{
+ font-size: 28rpx;
+ margin-top: 10rpx;
+}
+.content{
+  margin-top: -30rpx;
+  padding: 30rpx;
+}
+.content-info .tr-item .th-item:nth-child(even){
+  background: rgb(250, 253, 246);
+}
+.head-date1{
+  margin-top: -20rpx;
+}
+.class1{
+  margin-left:-370rpx;
+}

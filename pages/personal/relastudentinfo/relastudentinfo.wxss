@@ -1,0 +1,57 @@
+/* pages/personal/relastudentinfo/relastudentinfo.wxss */
+.relastudentinfo{
+  padding: 30rpx;
+}
+.student-msg{
+
+}
+.student-msg .msg-img .img image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.student-msg .msg-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+}
+.cancel-btn{
+  margin: 50rpx 0;
+}
+.item-head{
+  color:rgb(149, 229, 1);
+  padding: 30rpx;
+  font-size: 50rpx;
+}
+.grow-item{
+  
+}
+.growrecord-title{
+  margin-top: 10rpx;
+}
+.growthRecord{
+ margin-bottom: 10rpx;
+}
+.text-item{
+ padding-left: 30rpx;
+  font-size: 33rpx;
+}
+.record{
+  padding-bottom: 10rpx;
+  margin-left: 170rpx;
+
+  color:rgb(199, 195, 195);
+   display: flex;
+  flex-direction: row;
+}
+.round{
+margin-top: -35rpx;
+ font-size: 80rpx;
+ color: rgb(149, 229, 1)
+
+}
+.item-record{
+margin-left: 30rpx;
+font-size: 30rpx;
+}

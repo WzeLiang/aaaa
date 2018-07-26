@@ -1,0 +1,90 @@
+<view class="personal-home">
+  <view class='self-head text-center'>
+    <view class='head-img'>
+      <image src='{{user.profilePicture}}'></image>
+    </view>
+    <view class='head-name'>{{user.nickname==null?"暂无昵称":user.nickname}}</view>
+  </view>
+  <!--家长  -->
+  <view wx:if="{{memberType==1}}">
+    <view class='relation'>
+      <view class='relation-box'>
+        <block wx:for="{{user.students}}">
+          <navigator url='../relastudentinfo/relastudentinfo?studentid={{item.studentId}}'>
+            <view class='relation-item' id="{{item.studentId}}">
+              <view class="item-img">
+                <image src='{{item.profilePicture}}'></image>
+              </view>
+              <view class="item-name">{{item.studentName}}</view>
+              <view class="item-class text-gray">{{item.className}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <view class='add-box text-center'>
+        <navigator url='../addrelation/addrelation'>
+          <view class="add-img">
+            <image src='../../../images/add.png'></image>
+          </view>
+          <view class="add-text text-gray">关联学生</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- end--relation -->
+
+    <view class='operate text-black'>
+      <view class='score' bindtap='toscore'>
+        <view>我要评分</view>
+        <view>></view>
+      </view>
+      <view class='appointment' bindtap='toappointment'>
+        <view>我要预约</view>
+        <view>></view>
+      </view>
+      <picker wx:if="{{flag == 2}}" mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='memberType' value="{{index}}" bindchange="memberTypeChange">
+        <view class='appointment'>
+          <view>{{array[index]}}</view>
+          <view>></view>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!--教师  -->
+  <view wx:if="{{memberType==2}}">
+    <view class='relation'>
+      <view class='relation-box'>
+        <block wx:for="{{user.classes}}">
+          <navigator url='../relastudentinfo/relastudentinfo'>
+            <view class='relation-item'>
+              <view class='item-bigimg'>{{}}</view>
+              <view class="item-name">{{item.className}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+    <!-- end--relation -->
+
+    <view class='operate text-black'>
+      <view class='score' bindtap='toscore'>
+        <view>我的评分</view>
+        <view>></view>
+      </view>
+      <view class='appointment' bindtap='toappointment'>
+        <view>我的预约</view>
+        <view>></view>
+      </view>
+      <picker wx:if="{{flag == 2}}" mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='memberType' value="{{index}}" bindchange="memberTypeChange">
+        <view class='appointment'>
+          <view>{{array[index]}}</view>
+          <view>></view>
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">
+  {{messageContent}}
+</view>

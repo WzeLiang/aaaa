@@ -1,0 +1,13 @@
+<import src="../../../../wxParse/wxParse.wxml" />
+
+
+<view class='teacherinfo'>
+    <view class='img text-center' >
+        <image src='{{profilePicture}}'></image>
+    </view>
+      <view class='name text-center'>{{teacherName}}</view>
+      <view class='duties text-center'>{{teacherPsition}}</view>
+      <view class='explain'>
+         <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+</view>

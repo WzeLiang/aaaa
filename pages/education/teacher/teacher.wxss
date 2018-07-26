@@ -1,0 +1,82 @@
+/* pages/education/teacher/teacher.wxss */
+.teacher{
+  
+}
+.select_box{
+  text-align: center;
+  background: #fff;
+  width: 100%;
+  margin: 30rpx auto;
+  position: relative;
+}
+.select{
+  box-sizing: border-box;
+  /* width: 100%; */
+  height: 70rpx;
+  border:none;
+  border-radius: 8rpx;
+  /* display: flex; */
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  /* flex: 1; */
+}
+.select_img{
+  width: 40rpx;
+  height: 40rpx;
+  /* display: block; */
+  margin-left: 15rpx;
+  vertical-align: middle;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  width: 450rpx;
+  text-align: center;
+  position: absolute;
+  top: 70rpx;
+  box-sizing: border-box;
+  height:300rpx;
+  left: 130rpx;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  box-shadow:0px 0px 20px #7D7D7D;
+  border-radius:10rpx; 
+}
+.option_box::-webkit-scrollbar {
+        display: none;
+    }
+.option{
+  display: block;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 12rpx;
+}
+.teacher-box{
+  padding-left: 30rpx;
+}
+.teacher-box .item{
+  margin:0 30rpx 30rpx 0;
+  width: 210rpx;
+  display: inline-block;
+  text-align: center;
+}
+.teacher-box .item image{
+  width: 100%;
+  height: 300rpx;
+}
+.teacher-box .item .name{
+  font-size: 36rpx;
+  margin: 15rpx 0 10rpx 0;
+}
+.teacher-box .item .duties{
+  font-size: 30rpx;
+  color: rgb(119, 195, 41);
+}

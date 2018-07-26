@@ -1,0 +1,73 @@
+/* pages/personal/home/home.wxss */
+.self-head{
+  padding: 30rpx;
+}
+.self-head .head-img image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 90rpx;
+}
+.self-head .head-name{
+  font-size: 36rpx;
+}
+.relation{
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 10rpx;
+  margin: 0 30rpx;
+  position: relative;
+  padding: 30rpx 0;
+  
+}
+.relation-box{
+  overflow-y:scroll;
+  width: 500rpx;
+}
+.relation-box navigator{
+  display: inline-block;
+}
+.relation-box .relation-item {
+ display: inline-block;
+ margin-left: 30rpx;
+ text-align: center;
+}
+.relation-box image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.relation-box .relation-item .item-name{
+  font-size: 28rpx;
+  margin:5rpx 0 5rpx;
+
+}
+.relation-box .relation-item .item-class{
+  font-size:22rpx;
+}
+.add-box{
+  position: absolute;
+  right: 30rpx;
+  top: 50rpx;
+  height: 200rpx;
+  text-align: center
+}
+.add-box .add-img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.add-box .add-text{
+ font-size: 28rpx; 
+}
+.add-box navigator{
+   display: block;
+}
+.operate{
+  border-top: 1rpx solid rgb(229, 229, 229);
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+.operate .score,.operate .appointment{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+}

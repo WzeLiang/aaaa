@@ -1,0 +1,56 @@
+<view class="glory">
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+      <text class='select_text'>{{schoollist[index].merchantName}}</text>
+      <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/select-bottom.png'></image>
+    </view>
+    <view class='option_box' style='height:{{show?(schoollist.length>5?300:schoollist.length*84):0}}rpx; z-index: 1;position: absolute;'>
+      <text class='option' style='{{index==schoollist.length-1&&"border:0;"}}' wx:for='{{schoollist}}' wx:key='this' data-index='{{index}}' data-item='{{item}}' catchtap='optionTap'>{{item.merchantName}}</text>
+    </view>
+  </view>
+
+  <view class='student-box out-box' bindtap='clickView'>
+    <view class='img'>
+      <view class='name text-center text-green'>{{studenttitle.name}}</view>
+    </view>
+    <view class='time text-center'>{{studenttitle.time}}</view>
+
+    <swiper style="height:550rpx" current="{{current}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{chooseindex}}">
+        <swiper-item>
+          <view class='student-list list'>
+            <view wx:for='{{studentarr[item]}}' class='student-item item'>
+              <view class='img'>
+                 <image src='{{testurl+item.profilePicture}}'></image>
+              </view>
+              <view class='name text-center'>{{item.personName}}</view>
+              <view class='classnumb text-center'>{{item.className}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='student-box out-box' bindtap='clickView'>
+    <view class='img'>
+      <view class='name text-center text-green'>{{teachertitle.name}}</view>
+    </view>
+    <view class='time text-center'>{{teachertitle.time}}</view>
+    <swiper style="height:550rpx" current="{{current}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{teacherchooseindex}}">
+        <swiper-item>
+          <view class='teacher-list list'>
+            <view wx:for='{{teacherarr[item]}}' class='teacher-item item'>
+              <view class='img'>
+                 <image src='{{testurl+item.profilePicture}}'></image>
+              </view>
+              <view class='name text-center'>{{item.personName}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+</view>

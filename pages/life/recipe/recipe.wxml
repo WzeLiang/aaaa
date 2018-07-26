@@ -1,0 +1,48 @@
+<view class="recipe">
+  <!--老师  -->
+  <view>
+    <view class='content'>
+      <view class='content-date'>
+        <view class='pre' bindtap='preweek'>
+          <image src='../../../images/icon-left.png'></image>
+        </view>
+        <view class='first-date text-black'>{{weekarr[0]}}</view>
+        <view class='text-black'>-</view>
+        <view class='last-date text-black'>{{weekarr[6]}}</view>
+        <view class='next' bindtap='nextweek'>
+          <image src='../../../images/icon-right.png'></image>
+        </view>
+      </view>
+      <view class='content-info text-black text-center'>
+        <view class='head-date tr-item' style='border:none'>
+          <view wx:for="{{daylist}}" class='th-item' style='height:100%;'>
+            <view wx:if="{{item.day ==select}}" data-date="{{item.day}}" data-item="{{item.datetime}}" bindtap="changeDate" style="background-color: rgb(163, 221, 103)">{{item.day}}</view>
+            <view wx:if="{{item.day!=select}}" data-date="{{item.day}}" data-item="{{item.datetime}}" bindtap="changeDate">{{item.day}}</view>
+          </view>
+        </view>
+        <view class='head-date tr-item'>
+          <view wx:for="{{weeklist}}" class='th-item text-green' style='height:100%;'>
+            <view>{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='tab-content' wx:for="{{cookbook}}" wx:for-index="index1">
+
+    <view class='content-item'>
+      <view class='item-msg text-black'>
+        <view class='msg-title' wx:if="{{index1=='food1'}}">早餐</view>
+        <view class='msg-title' wx:if="{{index1=='food2'}}">午餐</view>
+        <view class='msg-title' wx:if="{{index1=='food3'}}">晚餐</view>
+        <text>{{item}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+
+<!-- <view bindtap='bbb'>{{weekarr}}</view>  -->

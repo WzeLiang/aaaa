@@ -1,0 +1,44 @@
+<view class='teachway'>
+  <view class='list'>
+    <view class='item' wx:for='{{eduwaylist}}'>
+     <navigator url='./teachwaydetail/teachwaydetail?eduwayId={{item.eduwayId}}'>
+      <view class='item-date text-center'>
+        <text>{{item.publishDate}}</text>
+      </view>
+      <view class='item-box'>
+        <view class='img'>
+          <image src='{{imageurl+item.imgUrl}}'></image>
+        </view>
+        <view class='content'>
+          {{item.title}}
+        </view>
+      </view>
+      </navigator>
+    </view>
+
+
+    <view class="weui-loadmore" hidden='{{loading}}' style='background: grey;text-align: center;'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">亲！已经没有更多了哦！</view>
+    </view>
+
+    <view class="body-view">
+      <loading hidden="{{hidding}}" bindchange="loadingChange">
+        加载中...
+      </loading>
+    </view>
+    <!-- <view class='item'>
+            <view class='item-date text-center'>
+                <text>14:05</text>
+            </view>
+            <view class='item-box'>
+                <view class='img'>
+                    <image src='../../../images/life/teach.jpg'  ></image>
+                </view>
+                <view class='content'>
+                    用户不再通过Facebook获取新闻 转而通过WhatsApp
+                </view>
+            </view>
+        </view> -->
+  </view>
+</view>

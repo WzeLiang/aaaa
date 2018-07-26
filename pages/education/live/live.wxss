@@ -1,0 +1,25 @@
+/* pages/education/live/live.wxss */
+.live{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.live .item{
+  width: 330rpx;
+}
+.live .item .item-video live-player{
+  width: 100%;
+  height: 250rpx;
+}
+.live .item .item-video{
+  position: relative;
+}
+.live .item .item-video{
+  position: relative;
+}
+.live .item .item-video .img-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250rpx;
+}

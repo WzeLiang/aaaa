@@ -1,0 +1,24 @@
+<!--pages/education/activity/joinactivity/joinactivity.wxml-->
+<view class='joinactivity'>
+  <view class='acitvity-name text-center text-green'>{{title}}</view>
+  <view class='join-box'>
+    <view class='box-head'>请选择要参加活动的学生</view>
+    <form bindsubmit='joinactivitysubmit'>
+
+
+
+      <checkbox-group bindchange="checkboxChange" name="checkes">
+        <view class='checkbox-item'  wx:for="{{items}}">
+          <label class="checkbox">
+            <checkbox value="{{item.studentId}}" checked="{{item.checked}}" />{{item.studentName}}<text class='classnumb text-gray'>{{item.className}}</text>
+          </label>
+        </view>
+      </checkbox-group>
+
+
+      <view class="operate-btn text-center">
+        <button formType="submit" class=' sub-button'>确认报名</button>
+    </view>
+    </form>
+  </view>
+</view>

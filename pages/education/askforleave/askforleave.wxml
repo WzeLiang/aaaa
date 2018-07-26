@@ -1,0 +1,45 @@
+<view class="askforleave">
+  <form class='askforleave-form' bindsubmit="askforleavesubmit">
+    <view class='form-item'>
+      <view class='text-gray'>请假学生</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{schoolarray}}" name='school' value="{{schoolindex}}" bindchange="schoolSelected">
+        <text>{{schoolarray[schoolindex]}}</text>
+      </picker>
+      <picker name="studentId" class="cybm_pic_1" value="{{students[studentindex].studentId}}" data-selecthx="{{students[studentindex].studentName}}" range="{{students}}"   range-key="{{'studentName'}}" bindchange="studentPickerSelected"  >
+        <view class="picker" >
+          <text> {{students[studentindex].studentName}}</text> 
+        </view>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>请假类型</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='leaveType' value="{{array[schoolindex].index}}" data-selecthx="{{array[schoolindex].name}}" range-key="{{'name'}}"bindchange="schoolSelected">
+        <text>{{array[schoolindex].name}}</text>
+      </picker>
+    </view>
+    <view class='form-item'>
+        <view class='text-gray'>请假理由</view>
+        <textarea name="leaveReason" placeholder='请输入请假理由'></textarea>
+    </view>
+     <view class='form-item'>
+        <view class='text-gray'>拍照</view>
+    </view>
+    <view class='form-item'>
+        <view  class='text-gray'>开始日期</view>
+        <picker mode="selector" class='text-black' mode='date' placeholder-class="input-placeholder" range="" name='startTime' value="{{startdate}}" bindchange="startdateselect">
+            <text>{{startdate}}</text>
+       </picker>
+      </view>
+      <view class='form-item'>
+        <view  class='text-gray'>结束日期</view>
+        <picker mode="selector" class='text-black' start="1999-01-01" end="2999-12-12" mode='date' placeholder-class="input-placeholder" range="" name='endTime' value="{{enddate}}" bindchange="enddateselect">
+            <text>{{enddate}}</text>
+       </picker>
+      </view>
+    
+
+
+    <button formType="submit" class='sub-forget sub-button'>关联</button>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

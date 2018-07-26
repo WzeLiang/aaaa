@@ -1,0 +1,257 @@
+/* pages/personal/addrelation/addrelation.wxss */
+
+.score {
+  padding: 30rpx;
+}
+
+.form-item {
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+  padding: 25rpx 0;
+  display: flex;
+  letter-spacing: 2rpx;
+  justify-content: space-between;
+}
+
+.form-itemnew {
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+  display: flex;
+  letter-spacing: 2rpx;
+  justify-content: space-between;
+}
+
+.form-item input {
+  direction: rtl;
+}
+
+.score-info, .score-fraction {
+  margin-top: 20rpx;
+}
+
+.score-info textarea {
+  border: 1rpx solid rgb(229, 229, 229);
+  margin-top: 20rpx;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+image {
+  width: 15%;
+  height: 55rpx;
+  top: 47.5rpx;
+  margin-left: 50rpx;
+}
+
+.comment1-description {
+  margin-top: 35rpx;
+}
+
+.comment1-description1 {
+  font-family: PingFangSC-Regular;
+  font-size: 50rpx;
+  color: #eac100;
+  margin-left: 30rpx;
+  right: 20px;
+}
+
+.star-pos {
+  position: absolute;
+  /* right: 100px; */
+  margin-right: 40rpx;
+}
+
+.comment1-description .star-pos .hideStar {
+  z-index: 2;
+  /* http://imgbase64.duoshitong.com/ 采用imgbase64将image包下的图片 score_white.png 转换*/
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACzklEQVRIS7WXS2gUQRCG6+9OFMToxd2drUb0lATPihFUgsQXmPhARI8JgiLiSa/i0YMXUTCHIOJB0IOi4gPxraBi7iaCSCTTO9nNwReCSaZLZklkk+xjZjfpS8N0/f/XXXRX94DqaEEQbAvD8DqAKaVUn+d5z5PaIKlARJqstSMAONKKiGXmNdEkknglBudyuV4RuVoKAdCbzWavLRpYRGCtHQLQWgoRkc/M3A5A4sITrdhau5+IbpczF5F9xpi7iwX+SETrK5gPMvOGBQfncrlOEXlRw3grM7+JA4+damvtYyLaWcP0ATPvWRBwoVBoCcOw0zl3L46hUqpHa/0ylUr9qhZfXLGI6Hw+v9Y51yYi7UTURkQzfSYOsExMnoiGiGg46gEMK6WG0un0VwAOQRB0O+cGiChdJyCpLK+UOhqdy+9EtDKpusH4H/B9/xuA1Q0aJZWPRKnucM49I6JlSdV1xv8RkR3FzWWt3SwiTwEsrdMslkxE/gLoYua3/8/x9FX3cLHgIjKhtd49c4XOKiDT8EcAlsRaQsygCApgLzNHRajY5lUua+0uIrpPRE0xfWuFRfd0dym0LDj66Pt+D4DoFtK1XGuMhyJywBgzr+pVrNXW2htEdKQRsIjcNMYcLudREez7/jsAHQ2C3xtjNiUCW2ujIr+8ETAR/Wbmltjg8fFxMzExMdogtChvbm42qVTKzvUqm2rf97cDeLIQYKVUl+d5UWWc1SqBTwG4uBBgETlljLkUC2yt7SeiYzXAP6fHV1SLE5ErxpgTccGviWhLBcMpEekXkXNaa+WcOwvgeJWC84qZO+OCC0S0qgz4jtb6TCaT+VI6VigUWicnJ88TUfT8ndvGmTkVC+z7/igAUxI8qJQ66Xneh2ppDYJgo3Pu8pwn8CdmXhcX3AdgQERGlVKns9nsrbgbLfrbGBsbOxSG4YVIo7U+WG7C/wBW7CZRj3nSEAAAAABJRU5ErkJggg==');
+  width: 83rpx;
+  height: 43rpx;
+  background-size: 43rpx 43rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.starsM {
+  z-index: 1;
+  width: 83rpx;
+  height: 43rpx;
+  /* http://imgbase64.duoshitong.com/ 采用imgbase64将image包下的图片 score_yellow.png 转换*/
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACu0lEQVRIS7WXTUgUYRzGf/8Z+yCyLruzkESdVDoXWenuFPYFaRkRdVSCIsJTXaNjhy5RkIeI6BDUwajog8icdcWKvKdBhCHCzhpURlHtzj92UdF1233H1TnOPM/ze9+X931mRljENZlkT6DcUcjaQlckwauwMRLWoP3UZCzGgA3T3olowCbZTTZMVmiw79GJcGseROh04txeNrAqkhlgBKgvgnyIxmkUQU3hoWac9ugQobdUuCUcicR5uCxg3+MdwtaS4cqw47JtycGZFK4G9JcNVuKOS8oEbrzUfpLnwP4KoU+cBIeWBJwZpJYsrgqPjAKVdmrwos1MldMXZqyK7Q+xWbI0iNIYCA0Cjao0iBAzARZrFHyBEVVGLRjBYjSwGXF28kmEQDIebYFwU8BZDCCsJz8gSzklvsdXhPVhA6rSK9/ET/IZ2FhVUEizKmPypZ+mrEWfwJqQ/kXJFX4i7CtsLr+fZhVeirBqUWmGJlV+i9Lq7GZw9hznX3U55elywRX+2HBw5hU6r0AKcHgmsNJwEkayPFQsDjsthRIqXAuay09xgByPEWqMUiuJlCw2bXOhJcH5m5kk7ar0ItiVcit0d06Eo9HEwtb7b1enPe6KcLIqMNxzEpwolVEO/FqEpmrAqryJuewIBfY9phDWVgNG+eG41BqDJ4eoC/4yXhV0Zvfa1EWbmSjOKrnUaY+9IrxYCrAltEbi9BmBfY9uhKtLAUbpdlyuGYHTSXoETlcAf59+vq6cTpQbUZezRmA/yQDQUjIwXwhCz+rVXJLfWL+UiyhnyhRO0kngGoHTHhkRIsViVR6wgguxXXyc+yyToj7IcVmEjhKeyZhL1Ajse4wj1M2KlWHL5lykhbfllnUyxfYgx/WiT+D3ToItZuAkXcBNKByp806C+6Ybbfpv4zjKlbzHsjlWasD/AAXx4CA0Y1KzAAAAAElFTkSuQmCC');
+  background-size: 43rpx 43rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.score {
+  right: 20px;
+  color: #eac100;
+}
+
+.list {
+  padding: 0 40rpx 40rpx 40rpx;
+}
+
+.item {
+  margin: 60rpx 0 60rpx;
+}
+
+.item-date text {
+  font-size: 28rpx;
+  color: white;
+  background: rgb(211, 211, 211);
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding: 10rpx 30rpx;
+}
+
+.item-box {
+  box-shadow: #bfbfbf 0px 0px 10px;
+  margin-top: 40rpx;
+}
+
+.item-box>.img>image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.item-box .content {
+  box-shadow: 0px 8px 20px #a1a1a1;
+  margin-top: 20rpx;
+  background: white;
+  padding: 30rpx;
+  font-size: 36rpx;
+  letter-spacing: 0.5rpx;
+  border-radius: 10rpx;
+}
+
+.title-h3 {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.pro-box {
+  display: flex;
+  flex-flow: wrap;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.pro-item {
+  width: 187.5rpx;
+  height: 200rpx;
+  box-sizing: border-box;
+  /* border: solid 1rpx red; */
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: rgb(102, 102, 102);
+}
+
+.pro-item image {
+  margin-top: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.class-msg {
+  padding: 30rpx 20rpx;
+}
+
+.class-msg .msg-head {
+  line-height: 45rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-h3 {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.more {
+  font-size: 30rpx;
+  color: rgb(102, 102, 102);
+}
+
+.msg-content .content-item {
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+  padding: 20rpx 0;
+}
+
+.msg-content .content-item .item-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.msg-content .content-item .item-title .title-classnumb {
+  font-size: 40rpx;
+  font-weight: 100;
+}
+
+.msg-content .content-item .item-title .title-date {
+  font-size: 30rpx;
+  vertical-align: text-bottom;
+  line-height: 50rpx;
+}
+
+.msg-content .content-item .item-info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: auto;
+  overflow: hidden;
+  font-size: 32rpx;
+  letter-spacing: 0.5rpx;
+  line-height: 50rpx;
+  text-indent: 60rpx;
+  text-align: left;
+}
+
+.unread {
+  position: relative;
+}
+
+.unread:after {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: red;
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.title-name {
+  color: green;
+  font-size: 35rpx;
+  vertical-align: text-bottom;
+  line-height: 50rpx;
+}
+
+.title-score {
+  color: #eac100;
+  font-size: 40rpx;
+}
+
+.img image {
+  width: 150%;
+  height: 100rpx;
+  border-radius: 57rpx;
+  right: 200px;
+}
+
+.flex-wrp {
+  display: flex;
+  flex-direction: row;
+}
+
+.bc_left {
+  width: 100px;
+  height: 100px;
+}
+
+.bc_right {
+  left: 50px;
+}

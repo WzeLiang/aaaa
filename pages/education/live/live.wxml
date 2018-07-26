@@ -1,0 +1,20 @@
+<view class='live'>
+    <view class='item'>
+      <view class='item-video'>
+          <live-player src="https://domain/pull_stream" mode="RTC" autoplay bindstatechange="statechange" binderror="error" />
+          
+      </view>
+      <view class='item-title text-center'>
+        校园大门
+      </view>
+    </view>
+    <view class='item'>
+      <view class='item-video'>
+          <live-player src="https://domain/pull_stream" mode="RTC" autoplay bindstatechange="statechange" binderror="error"  />
+          
+      </view>
+      <view class='item-title text-center'>
+        校园大门
+      </view>
+    </view>
+</view>

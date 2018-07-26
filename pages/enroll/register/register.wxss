@@ -1,0 +1,24 @@
+/* pages/enroll/register/register.wxss */
+.register{
+  padding: 30rpx;
+}
+.form-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 25rpx 0;
+  letter-spacing: 2rpx;
+  /* font-size: 28rpx; */
+}
+.proving-code {
+  display: flex;
+  justify-content: space-between;
+}
+.take-provingcode{
+  color: rgb(119, 195, 41);
+}
+.picker-text{
+   color: rgb(203,203,203);
+}
+.reset-code{
+  background: rgb(203,203,203);
+  color: rgb(229,229,229);
+}

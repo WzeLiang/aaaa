@@ -1,0 +1,35 @@
+/* pages/education/teacher/teacherinfo/teacherinfo.wxss */
+@import "../../../../wxParse/wxParse.wxss";
+.explain{
+  margin-top: 15rpx;
+  color: rgb(102, 102, 102);
+  letter-spacing: .5rpx;
+  font-size: 32rpx;
+  text-indent: 50rpx;
+  line-height: 50rpx;
+}
+.teacherinfo{
+  padding: 30rpx;
+}
+
+.img image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+}
+.name{
+  font-size: 36rpx;
+  margin: 15rpx 0 10rpx 0;
+}
+.duties{
+  font-size: 30rpx;
+  color: rgb(119, 195, 41);
+}
+.explain{
+  margin-top: 15rpx;
+  color: rgb(102, 102, 102);
+  letter-spacing: .5rpx;
+  font-size: 32rpx;
+  text-indent: 40rpx;
+  line-height: 50rpx;
+}

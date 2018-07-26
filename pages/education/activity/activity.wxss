@@ -1,0 +1,84 @@
+/* pages/education/activity/activity.wxss */
+
+.activity{
+ margin: 2.5em auto;
+}
+
+.tabnav{
+  display: flex;
+  border-top:1rpx solid rgb(229,229,229); 
+  border-bottom:1rpx solid rgb(229,229,229); 
+background-color: white;
+}
+.tabnav .tab-item{
+  font-size: 33rpx;
+  flex: auto;
+  text-align: center;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+  border-right: 1rpx solid rgb(229,229,229);
+}
+.tabnav .tab-item:last-child{
+  border-right: none;
+}
+.tab-content{
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+}
+.tab-content .content-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  
+}
+.tab-content .content-item .item-msg{
+  line-height: 62rpx;
+}
+.item-msg .msg-title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx；
+}
+.active{ 
+  border-bottom: 4rpx solid rgb(119, 195, 41);
+  color: rgb(119, 195, 41);
+}
+.item-operate{
+  display: flex;
+   align-items:center;
+   font-size: 30rpx;
+}
+.loading-img{
+    color: white;
+  background: white;
+  height: 50rpx;
+  width:40rpx;
+  line-height: 100rpx;
+  padding: 30rpx 350rpx 30rpx;
+ 
+ 
+}
+.item-operate .operate-btn{
+  color: white;
+  background: rgb(160, 220, 100);
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 10rpx 20rpx;
+  text-align: center;
+  border-radius: 35rpx;
+}
+.item-operate .operate-username{
+  color:  rgb(160, 220, 100);
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.item-operate .operate-stop{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+

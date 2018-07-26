@@ -1,0 +1,24 @@
+
+.forget{
+  padding: 30rpx;
+}
+
+.form-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 25rpx 0;
+  letter-spacing: 2rpx;
+}
+.verifycode {
+  display: flex;
+  justify-content: space-between;
+}
+.take-verifycode{
+  color: rgb(119, 195, 41);
+}
+.picker-text{
+  color: rgb(203,203,203);
+}
+.countDown-text{
+  background: rgb(203,203,203);
+  color: rgb(229,229,229);
+}

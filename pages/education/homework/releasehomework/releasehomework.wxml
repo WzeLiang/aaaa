@@ -1,0 +1,32 @@
+<view class='releasehomework'>
+  <form  bindsubmit="releasehomework">
+      <view class='form-item'>
+        <view class='text-gray'>班级</view>
+        <view class='class-numb text-black'>
+           <picker name="classId" class="cybm_pic_1" value="{{classes[classindex].classId}}" data-selecthx="{{classes[classindex].className}}" range="{{classes}}"   range-key="{{'className'}}" bindchange="classPickerSelected"  >
+        <view class="picker" >
+          <text> {{classes[classindex].className}}</text> 
+        </view>
+      </picker>
+
+        </view>
+      </view>
+       <view class='form-item'>
+        <view  class='text-gray'>日期</view>
+        <picker  class='text-black' mode='date' placeholder-class="input-placeholder" range="" name='homeworkDate' value="{{date}}" bindchange="dateselect">
+            <text>{{date}}</text>
+       </picker>
+      </view>
+      <view class='form-item'>
+        <view  class='text-gray'>科目</view>
+        <picker  class='text-black' name="subjectId" placeholder-class="input-placeholder" data-selecthx="{{array[subjectindex].subjectName}}" range="{{array}}" range-key="{{'subjectName'}}" value="{{array[subjectindex].subjectId}}" bindchange="listenerPickerSelected">
+            <text>{{array[subjectindex].subjectName}}</text>
+       </picker>
+      </view>
+      <view class='homework-info'>
+        <view  class='text-gray'>作业内容</view>
+        <textarea name="homeworkContent" placeholder='请输入作业内容'></textarea>
+      </view>
+      <button formType="submit" class='sub-releasehomework sub-button'>发布</button>
+  </form>
+</view>

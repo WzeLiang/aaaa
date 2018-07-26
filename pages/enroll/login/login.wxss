@@ -1,0 +1,47 @@
+.login-img image{
+  height: 450rpx;
+  width: 100%;
+}
+.login{
+  padding: 30rpx;
+}
+
+.form-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 25rpx 0;
+  /* font-size: 30rpx; */
+  letter-spacing: 2rpx;
+}
+.proving-code {
+  display: flex;
+  justify-content: space-between;
+}
+.take-provingcode{
+  color: rgb(119, 195, 41);
+}
+.forget{
+  text-align: right;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: rgb(119, 195, 41);
+}
+.register{
+   text-align: center;
+   font-size: 28rpx;
+   margin-top: 49rpx;
+   color: rgb(255, 162, 0);
+}
+.input-img{
+  width: 26rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+  margin-right: 20rpx;
+}
+
+.flex-wrp{
+  display: flex;
+  flex-direction:row;
+}
+.picker-text{
+  color: rgb(203,203,203);
+}

@@ -1,0 +1,32 @@
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="newslist" bindscrolltolower="bindDownLoad" bindscroll="scroll" onPullDownRefresh="refresh">
+  <view class='msg-head'>
+    <view class='title-h3' style='text-align: center;'>最新动态</view>
+  </view>
+  <view class='class-msg'>
+
+    <view class='msg-content' wx:for='{{newslist}}'>
+      <navigator url='./dynamicinfo/dynamicinfo?newsId={{item.newsId}}'>
+        <view class='content-item'>
+          <view class='item-title'>
+            <view class='title-classnumb'>{{item.title}}</view>
+            <view class='title-date text-lightgray'>{{item.publishDate}}</view>
+          </view>
+          <view class='item-info text-gray'>
+            {{item.summary}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="weui-loadmore" hidden='{{isHideLoadMore}}'  style='background: grey;text-align: center;'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">亲！已经没有更多了哦！</view>
+         </view>
+</scroll-view>
+
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>

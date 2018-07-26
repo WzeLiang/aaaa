@@ -1,0 +1,38 @@
+<view class='login-img'>
+  <image src='../../../images/register/login.png'></image>
+</view>
+<view class="login">
+
+  <form class='login-form' bindsubmit="loginsubmit">
+    <view class='form-item'>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='memberType' value="{{index}}" bindchange="listenerPickerSelected">
+        <view class='flex-wrp'>
+          <image class='input-img' src='../../../images/login/memberType.png'></image>
+          <text class='{{index==0 ? "picker-text" : ""}}'>{{array[index]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class='form-item flex-wrp '>
+      <image class='input-img' src='../../../images/login/phone.png'></image>
+      <input placeholder='请输入您的手机号' name='phone' value='{{phone}}' placeholder-class="input-placeholder" type='number' maxlength='11'></input>
+    </view>
+    <view class='form-item flex-wrp '>
+      <image class='input-img' src='../../../images/login/password.png'></image>
+      <input placeholder='请输入密码' name='password' value="{{password}}" placeholder-class="input-placeholder" type='password'></input>
+    </view>
+    <view class='forget'>
+      <navigator url='../forget/forget'>
+        忘记密码
+      </navigator>
+    </view>
+    <button formType="submit" class='sub-button'>确定</button>
+    <view class='register'>
+      <navigator url='../register/register'>
+        新用户注册
+      </navigator>
+    </view>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">
+  {{messageContent}}
+</view>

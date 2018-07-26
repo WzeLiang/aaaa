@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/education/home/home",
+    "pages/life/home/home",
+    "pages/personal/home/home",
+    "pages/enroll/login/login",
+    "pages/education/homework/homework",
+    "pages/education/classmsg/classmsg",
+    "pages/education/classmsg/addclassmsg/addclassmsg",
+    "pages/education/homework/releasehomework/releasehomework",
+    "pages/education/teacher/teacher",
+    "pages/education/glory/glory",
+    "pages/education/syllabus/syllabus",
+    "pages/education/teacher/teacherinfo/teacherinfo",
+    "pages/education/live/live",
+    "pages/education/live/liveinfo/liveinfo",
+    "pages/education/askforleave/askforleave",
+    "pages/education/askforleave/leavelist/leavelist",
+    "pages/education/activity/activity",
+    "pages/education/attendance/attendance",
+    "pages/education/activity/joinactivity/joinactivity",
+    "pages/education/activity/userlist/userlist",
+    "pages/life/schoolinfo/schoolinfo",
+    "pages/life/teachway/teachway",
+    "pages/life/teachway/teachwaydetail/teachwaydetail",
+    "pages/life/dynamic/dynamic",
+    "pages/life/dynamic/dynamicinfo/dynamicinfo",
+    "pages/life/recipe/recipe",
+    "pages/life/foodtrace/foodtrace",
+    "pages/personal/addrelation/addrelation",
+    "pages/personal/relastudentinfo/relastudentinfo",
+    "pages/personal/score/score",
+    "pages/personal/score/scoredetail/scoredetail",
+    "pages/personal/appointment/appointment",
+    "pages/enroll/register/register",
+    "pages/enroll/forget/forget",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "A佳Kid",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#89cb44",
+    "list": [
+      {
+        "pagePath": "pages/education/home/home",
+        "text": "教务",
+        "selectedIconPath": "./images/education-on.png",
+        "iconPath": "./images/education-off.png"
+      },
+      {
+        "pagePath": "pages/life/home/home",
+        "text": "生活",
+        "selectedIconPath": "./images/life-on.png",
+        "iconPath": "./images/life-off.png"
+      },
+      {
+        "pagePath": "pages/personal/home/home",
+        "text": "个人",
+        "selectedIconPath": "./images/personal-on.png",
+        "iconPath": "./images/personal-off.png"
+      }
+    ]
+  }
+}

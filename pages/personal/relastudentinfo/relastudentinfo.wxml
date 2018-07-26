@@ -1,0 +1,67 @@
+<view class='relastudentinfo'>
+    <view class='student-msg'>
+      <view class='msg-img msg-item'>
+          <view class='text-gray'>头像</view>
+          <view class='img'>
+            <image src='{{user.profilePicture}}'></image>
+          </view>
+      </view>
+      <view class='msg-name msg-item'>
+          <view class='text-gray'>姓名</view>
+          <view class='text-black'>{{user.studentName}}</view>
+      </view>
+      <view class='msg-class msg-item'>
+          <view class='text-gray'>班级</view>
+          <view class='text-black'>{{user.className}}</view>
+      </view>
+       <view class='msg-sex msg-item'>
+          <view class='text-gray'>性别</view>
+          <view wx:if="{{user.sex==0}}" class='text-black'>女</view>
+          <view wx:if="{{user.sex==1}}" class='text-black'>男</view>
+      </view>
+       <view class='msg-date msg-item'>
+          <view class='text-gray'>出生日期</view>
+          <view class='text-black'>{{user.birthdate}}</view>
+      </view>
+       <view class='msg-parent msg-item'>
+          <view class='text-gray'>家长</view>
+          <view class='parent-box'>
+              <!--循环遍历家长信息,relatipnType: (1：父亲2：母亲3：爷爷4：奶奶5：其他)-->
+             
+              <view wx:for="{{user.parents}}">
+                  <text wx:if="{{item.relationType==1}}">父亲 </text>
+                  <text wx:if="{{item.relationType==2}}">母亲 </text>
+                  <text wx:if="{{item.relationType==3}}">爷爷 </text>
+                  <text wx:if="{{item.relationType==4}}">奶奶</text>
+                  <text wx:if="{{item.relationType==5}}">其他 </text>
+                  <text>{{item.parentsName}} </text>
+                  <text style="color:blue">{{item.phone}}</text>
+              </view>
+             
+          </view>
+      </view>
+    </view>
+    
+    <view class='growrecord'>
+        <view class='growrecord-title'>成长记录</view>
+        <view wx:for="{{user.growthRecord}}" class='growthRecord'>
+
+        <view class='grow-item' >
+            <view class='item-head' >
+            <text class ="text-item">{{item.createDate  }} </text>
+            <text class ="text-item">{{item.className}}, {{item.schoolName}}</text>
+            </view>
+        </view>
+
+        <view class='record'>
+        <text class="round">·</text>
+        <text class="item-record">{{item.record}}</text>
+        </view>
+
+        </view>
+    </view>
+
+    <view class="cancel-btn text-center">
+        <view class="dis-button button-hover" bindtap='disassociation'>取消关联</view>
+    </view>
+</view> 

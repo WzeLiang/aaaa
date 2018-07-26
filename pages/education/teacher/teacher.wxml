@@ -1,0 +1,25 @@
+<view class='teacher'>
+
+    <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{schoollist[index].merchantName}}</text>
+            <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/select-bottom.png'></image>         
+        </view>
+        <view class='option_box' style='height:{{show?(schoollist.length>5?300:schoollist.length*84):0}}rpx;'>
+            <text class='option' style='{{index==schoollist.length-1&&"border:0;"}}' wx:for='{{schoollist}}' wx:key='this' id='{{item.merchantId}}' data-index='{{index}}' catchtap='optionTap'>{{item.merchantName}}</text>
+        </view>
+  </view>
+  <view class='teacher-box'>
+      <view class="item" wx:for="{{teacherlist}}">
+          <navigator url='./teacherinfo/teacherinfo?teacherId={{item.teacherId}}'>
+              <view class='image'>
+                 <image src='{{item.profilePicture}}'></image>
+              </view>
+              <view class='name'>{{item.teacherName}}</view>
+              <view class='duties'>{{item.teacherPosition}}</view>
+          </navigator>
+      </view>
+      
+      
+  </view>
+</view>

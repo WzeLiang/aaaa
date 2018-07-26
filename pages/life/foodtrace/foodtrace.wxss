@@ -1,0 +1,10 @@
+/* pages/life/foodtrace/foodtrace.wxss */
+@import "../../../wxParse/wxParse.wxss";
+.explain{
+  margin-top: 15rpx;
+  color: rgb(102, 102, 102);
+  letter-spacing: .5rpx;
+  font-size: 32rpx;
+  text-indent: 50rpx;
+  line-height: 50rpx;
+}

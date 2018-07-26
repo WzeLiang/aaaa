@@ -1,0 +1,10 @@
+<!--pages/life/schoolinfo/schoolinfo.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class='explain'>
+    <import src="../../../../wxParse/wxParse.wxml" />
+    <view class="">
+      <!-- 这一块是富文本 显示的内容区 -->
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>

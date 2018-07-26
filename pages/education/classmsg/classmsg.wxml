@@ -1,0 +1,51 @@
+<view class='classmsg'>
+  <!--家长  -->
+  <view wx:if="{{memberType==1}}">
+    <view class='tabnav'>
+      <view wx:for="{{students}}" class='tab-item {{currentActive==index?"active":""}}' wx:key="" bindtap='classAdvice' data-current="{{index}}">
+        <view class='item-classnumb {{item.className == "全部" ? "item-all" : ""}}'>
+          {{item.className}}
+        </view>
+        <text class='text-lightgrayer'>{{item.name}}</text>
+      </view>
+    </view>
+
+    <view class='class-msg'>
+      <view class='msg-content'>
+        <view wx:for="{{advices}}" class='content-item' wx:key="">
+          <view class='item-title'>
+            <view class='title-classnumb'>
+              {{item.className}}
+              <text class='text-lightgrayer2' hidden='{{showStudentName}}'>({{item.studentName}})</text>
+            </view>
+            <view class='title-date text-lightgrayer'>{{item.adviceDate}}</view>
+          </view>
+          <view class='item-info text-gray'>
+            <text>{{item.adviceContent}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!--老师 -->
+  <view wx-if="{{memberType==2}}">
+    <view class='class-msg'>
+      <view class='msg-content'>
+        <view wx:for="{{advices}}" class='content-item' wx:key="">
+          <view class='item-title title-classnumb'>
+            <view>{{item.className}}</view>
+            <view class='title-date text-lightgray'>{{item.adviceDate}}</view>
+          </view>
+          <view class='item-info text-gray'>
+            <text>{{item.adviceContent}}</text>
+          </view>
+        </view>
+        <view class='addclassmsg text-center'>
+          <button class='sub-button' bindtap='toaddclassmsg'>发布通知</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

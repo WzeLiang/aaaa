@@ -1,0 +1,78 @@
+
+<view class='homework'>
+      <view class='head'  wx-if="{{usertype== 2}}">
+          <view class='tab tab-list back-green {{select?"ismiddle":"istop"}}'>
+              <view class='class'>
+                  <view class='classnumb' data-classId="2">列表</view>
+                  <view class='studentnumb'>人数：34</view>
+              </view>
+              <view class='tabbtn' bindtap='selectitem' >
+                  <view class='img'>
+                      <image src='../../../../images/tab.png'></image>
+                  </view>
+              </view>
+            </view>
+             
+            <view class='tab tab-select back-green {{select?"isbottom":"ismiddle"}}'>
+              <view class='class'>
+                  <view class='classnumb'>五年二班</view>
+                  <view class='studentnumb'>人数：34</view>
+              </view>
+              <view class='tabbtn' bindtap='selectitem'>
+                  <view class='img'>
+                      <image src='../../../../images/tab.png'></image>
+                  </view>
+              </view>
+            </view>
+        </view>
+  <view class='content'>
+     <view class='content-date'>
+    <view class='pre' bindtap='preweek'>
+      <image src='../../../../images/icon-left.png'></image>
+    </view>
+    <view class='first-date text-black'>{{weekarr[0]}}</view>
+    <view class='text-black'>-</view>
+    <view class='last-date text-black'>{{weekarr[6]}}</view>
+    <view class='next' bindtap='nextweek'>
+      <image src='../../../../images/icon-right.png'></image>
+    </view>
+  </view>
+  <view class='content-info text-black text-center'>
+    <view class='head-date tr-item' style='border:none'> 
+      <view wx:for="{{daylist}}" class='th-item' style='height:100%;'>
+        <view wx:if="{{item.day == day}}"  data-date="{{item.datetime}}" data-classid="{{classid}}" data-item="{{item.day}}" bindtap="changeDate" style="background-color: rgb(163, 221, 103)">{{item.day}}</view>
+        <view wx:if="{{item.day != day}}" data-date="{{item.datetime}}" data-classId="{{classid}}" data-item="{{item.day}}" bindtap="changeDate">{{item.day}}</view>
+      </view>
+    </view>
+    <view class='head-date tr-item'>    
+      <view wx:for="{{weeklist}}" class='th-item text-green' style='height:100%;'>
+        <view>
+          {{item}}
+          </view>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view class='teacher'>
+    <view class='homework-content'>
+      <view class='homework-item'>
+        <view class='item-title' wx:for="{{leavelist.leaveList}}">
+          <view class='student'>
+            <view class='student-info'>
+              <view class='info-name'>{{item.studentName}}
+                <text>{{item.className}}</text>
+              </view>
+              <view>{{item.leaveType == 0?"事假" :(item.leaveType == 1? "病假" : "其他")}}
+                <text style="font-size:smaller">{{item.startTime}}-{{item.endTime}}</text>
+              </view>
+              <view class='item-content'>
+
+            </view>
+            </view>
+          </view>
+          <view class='subject'>{{item.leaveReason}}</view>    
+        </view>       
+      </view>
+    </view>
+  </view>
+</view>

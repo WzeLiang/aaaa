@@ -1,0 +1,19 @@
+/* pages/education/homework/releasehomework/releasehomework.wxss */
+.releasehomework{
+  padding: 30rpx;
+}
+.form-item{
+  display: flex;
+  justify-content: space-between;
+}
+.homework-info{
+  margin-top: 40rpx;
+}
+.homework-info textarea{
+  border: 1rpx solid rgb(229,229,229);
+  margin-top:20rpx;
+  width: 100%; 
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}

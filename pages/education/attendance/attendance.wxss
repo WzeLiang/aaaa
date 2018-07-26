@@ -1,0 +1,175 @@
+/* pages/education/syllabus/syllabus.wxss */
+/* pages/education/syllabus/syllabus.wxss */
+.head{
+  position: relative;
+  width: 750rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+.tab-list{
+  position: absolute;
+
+}
+.tab-select{
+ position: absolute;
+
+}
+.tab{
+  width: 100%;
+  transition: all .5s ease;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+}
+.tab .tabbtn{
+  text-align: center;
+}
+.tab .tabbtn  .img{
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: solid 4rpx white;
+  vertical-align: middle;
+}
+.tab .tabbtn .img image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+}
+.tab .class .calssnumb{
+ font-size: 38rpx;
+}
+.tab .class .studentnumb{
+ font-size: 30rpx;
+ margin-top: 10rpx;
+}
+.content{
+  padding: 30rpx;
+}
+.content .content-date{
+  display: flex;
+  height: 80rpx;
+  justify-content: space-around;
+  vertical-align: middle;
+  padding: 10rpx 40rpx;
+  line-height: 80rpx;
+}
+.content .content-date .pre,.content .content-date .next{
+  height: 80rpx;
+  vertical-align: middle;
+}
+.content .content-date .pre image,.content .content-date .next image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.content-info{
+  border: 1rpx solid rgb(229, 229, 229);
+}
+.content-info .tr-item{
+  display: flex;
+  border-bottom: 1rpx solid rgb(229, 229, 229);
+}
+.content-info .tr-item:last-child{
+  border: none;
+}
+.th-item:last-child{
+  border: none;
+}
+.th-item{
+  text-align: center;
+  font-size: 30rpx;
+  height: 86.25rpx;
+  line-height: 86.25rpx;
+  width:100%;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(229, 229, 229);
+}
+.parent-tips{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  font-size: 12px;
+}
+.teacher-tips{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+ line-height: 40rpx;
+}
+.teacher-tips .tips-all{
+  font-size: 14px;
+}
+.teacher-tips .tips-all .allnumb{
+  font-size: 16px;
+}
+.teacher-tips .tips-right{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.teacher-tips .tips-right .right-item{
+ position: relative;
+ margin-right: 40rpx;
+}
+
+.teacher-tips .tips-right .right-item::after{
+  position: absolute;
+  right: -20rpx;
+  top: 12rpx;
+  width: 1px;
+  height: 20rpx;
+  content: "";
+  background:gray;
+}
+.attendance-content{
+  
+}
+.attendance-content .content-item{
+ padding: 20rpx 0;
+
+}
+.attendance-content .content-item .item-head{
+ display: flex;
+ line-height: 30rpx;
+ align-items: center;
+}
+.attendance-content .content-item .item-info{
+  padding: 20rpx 0 20rpx 200rpx;
+  margin: 0 auto;
+
+}
+.attendance-content .content-item .item-info .info-am .icon,.attendance-content .content-item .item-info .info-pm .icon{
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  content: "";
+  display: inline-block;
+  margin-right: 10rpx;
+vertical-align: middle;
+}
+.attendance-content .content-item .item-head .head-date{
+ font-size: 14px;
+}
+.attendance-content .content-item .item-head .head-week{
+ font-size: 16px;
+ margin: 0 20rpx;
+}
+.attendance-content .content-item .item-head .head-time{
+ font-size: 12px;
+ line-height: 30rpx;
+}
+.teacher-tips .tips-right .right-item:last-child{
+  margin: 0;
+}
+.teacher-tips .tips-right .right-item:last-child::after{
+  width: 0
+}
+.active{
+  background: rgb(163, 221, 103);
+  color: white;
+}

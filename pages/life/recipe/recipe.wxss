@@ -1,0 +1,74 @@
+/* pages/education/syllabus/syllabus.wxss */
+.head{
+  position: relative;
+  width: 750rpx;
+  height: 160rpx;
+}
+.tab-list{
+  position: absolute;
+  top: -160rpx;
+}
+.tab-select{
+ position: absolute;
+  top: 0;
+}
+.tab{
+  width: 100%;
+  transition: all 1s ease;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+}
+.tab .tabbtn{
+  text-align: center;
+}
+.tab .tabbtn  .img{
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: solid 4rpx white;
+  vertical-align: middle;
+}
+.tab .tabbtn .img image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+}
+.tab .class .calssnumb{
+ font-size: 38rpx;
+}
+.tab .class .studentnumb{
+ font-size: 30rpx;
+ margin-top: 10rpx;
+}
+.content{
+  padding: 30rpx;
+  border-bottom: 1rpx solid rgb(130, 229, 1);
+}
+.content-info .tr-item .th-item:nth-child(even){
+  background: rgb(250, 253, 246);
+}
+.tab-content{
+  padding: 0 20rpx;
+  margin: 5rpx 0;
+}
+.tab-content .content-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  
+}
+.tab-content .content-item .item-msg{
+  line-height: 62rpx;
+}
+.item-msg .msg-title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 20rpx；
+}

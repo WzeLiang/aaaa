@@ -1,0 +1,15 @@
+<view class='addclassmsg'>
+  <form bindsubmit='classMsgSubmit'>
+    <view class='form-item'>
+      <view class='text-gray'>选择班级</view>
+      <picker mode="selector" class='text-black' placeholder-class="input-placeholder" range="{{classarray}}" name='type' value="{{classindex}}" bindchange="listenerPickerSelected">
+        <text>{{classarray[classindex]}}</text>
+      </picker>
+    </view>
+    <view class='classmsg-info'>
+      <view class='text-gray'>通知内容</view>
+      <textarea name='adviceContent' placeholder='请输入通知内容' maxlength='500' focus ='{{focus}}'></textarea>
+    </view>
+    <button formType="submit" class='sub-releasehomework sub-button'>发布</button>
+  </form>
+</view>

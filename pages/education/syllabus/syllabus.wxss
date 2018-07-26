@@ -1,0 +1,71 @@
+/* pages/education/syllabus/syllabus.wxss */
+.head{
+  position: relative;
+  width: 750rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+.tab-list{
+  position: absolute;
+  width: 2000rpx;
+  overflow-y: scroll
+}
+.tab-select{
+ position: absolute;
+
+}
+.tab{
+  transition: all .5s ease;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+}
+.tab .tabbtn{
+  text-align: center;
+}
+.tab .tabbtn  .img{
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: solid 4rpx white;
+  vertical-align: middle;
+}
+.tab .tabbtn .img image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+}
+.tab .class{
+  display: inline-block;
+  width:600rpx;
+  
+}
+.tab .class .student-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+  margin-right: 10rpx;
+}
+.tab .class .student-img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.tab .class .calssnumb{
+ font-size: 38rpx;
+}
+.tab .class .studentnumb{
+ font-size: 30rpx;
+ margin-top: 10rpx;
+}
+.content{
+  padding: 30rpx;
+}
+.content-info .tr-item .th-item:nth-child(even){
+  background: rgb(250, 253, 246);
+}

@@ -1,0 +1,127 @@
+<view wx:if='{{memberType==1}}'>
+  <view class="score">
+    <form class='score-form' bindsubmit="scoresubmit">
+      <view class='form-itemnew'>
+        <view class='text-gray'></view>
+        <navigator url='./scoredetail/scoredetail'>
+          <text class='text-score'>打分记录></text>
+        </navigator>
+      </view>
+      <view class='form-item'>
+        <view class='text-gray'>学生</view>
+        <picker mode="selector" placeholder-class="input-placeholder" range="{{studentarray}}" name='parent' value="{{studentindex}}" bindchange="studentSelected">
+          <text>{{studentarray[studentindex]}}></text>
+        </picker>
+      </view>
+      <view class='form-item'>
+        <view class='text-gray'>教师</view>
+        <picker mode="selector" placeholder-class="input-placeholder" range="{{teacherarray}}" name='school' value="{{teacherindex}}" bindchange="teacherSelected">
+          <view class="{{flag == 1 ? 'bc_red' : ''}}">
+            <text>{{teacherarray[teacherindex]}}></text>
+          </view>
+        </picker>
+      </view>
+      <view class='form-item'>
+        <view class='text-gray'>学周</view>
+        <!-- <view class='data'>3.25-3.31</view> -->
+        {{weekarr[0]}}-{{weekarr[6]}}
+      </view>
+      <view class='score-info'>
+        <view class='text-gray'>评价内容</view>
+
+        <view wx:if='{{flag==0}}'>
+          <textarea placeholder='请输入评价内容' name="content" value='{{content}}'></textarea>
+        </view>
+        <view wx:if='{{flag==1}}' class='bc_red'>
+          <textarea name="content" value='{{content}}'></textarea>
+        </view>
+      </view>
+
+      <view class='score-fraction'>
+        <view class='text-gray'>评分</view>
+      </view>
+      <!--星星评价-->
+      <view class="comment1-description" style="display:flex;flex-direction:row;">
+        <view class="star-pos" style="display:flex;flex-direction:row;">
+          <view class="starsM  {{flag2>=1? '': 'hideStar'}}" bindtap="changeColor11"></view>
+          <view class="starsM  {{flag2>=2? '': 'hideStar'}}" bindtap="changeColor12"></view>
+          <view class="starsM  {{flag2>=3? '': 'hideStar'}}" bindtap="changeColor13"></view>
+          <view class="starsM  {{flag2>=4? '': 'hideStar'}}" bindtap="changeColor14"></view>
+          <view class="starsM  {{flag2>=5? '': 'hideStar'}}" bindtap="changeColor15"></view>
+          <text class="score"></text>{{score}}分
+        </view>
+      </view>
+      <button formType="submit" class='sub-forget sub-button'>提交</button>
+    </form>
+  </view>
+  <view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>
+</view>
+
+
+
+
+
+<view wx:if='{{memberType==2}}'>
+  <view class='msg-head'>
+    <view class='title-h3'>评分：{{avgScore}}分</view>
+  </view>
+
+  <view class=''>
+    <view class='msg-content' wx:for='{{[0]}}'>
+      <view class='content-item'>
+
+      </view>
+    </view>
+  </view>
+
+  <view class=''>
+    <view class=''>
+      <view class='msg-content' wx:for='{{myscorelis}}'>
+        <!-- <view class='img'>
+          <image src='{{imageurl+item.imgUrl}}'></image>
+        </view> -->
+
+
+        <view class='content-item'>
+
+          <view class='flex-wrp'>
+            <view class='img'>
+              <image src='../../../images/education/teacher.jpg'></image>
+            </view>
+
+            <view>
+              <view class='item-title '>
+                <view class='title-classnumb a'>{{item.parentsName}}</view>
+                <view class='title-name a'>{{item.studentName}}</view>
+                <view class='title-date a text-lightgray'>{{item.className}}</view>
+                <view class='title-score a'>{{item.score}}分</view>
+              </view>
+              <view class='' style='display: flex;justify-content:space-around;'>
+                <view class='title-date' style='font-size: 25rpx;color:rgb(198, 198, 198);'>{{item.createTime}}</view>
+                <view class='title-date' style='font-size: 25rpx;color:rgb(198, 198, 198);'>学周:{{item.week}}</view>
+              </view>
+            </view>
+
+          </view>
+
+          <view class='item-info text-gray list'>
+            {{item.evaluationContent}}
+          </view>
+        </view>
+
+      </view>
+
+      <view class="weui-loadmore" hidden='{{loading}}' style='background: grey;text-align: center;'>
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">亲！已经没有更多了哦！</view>
+      </view>
+
+      <view class="body-view">
+        <loading hidden="{{hidding}}" bindchange="loadingChange">
+          加载中...
+        </loading>
+      </view>
+    </view>
+  </view>
+
+</view>

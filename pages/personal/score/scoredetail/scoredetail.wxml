@@ -1,0 +1,31 @@
+<!--pages/personal/score/scoredetail/scoredetail.wxml-->
+<view class='teachway'>
+  <view class='list'>
+    <view class='msg-content' wx:for='{{myscorelis}}'>
+      <view class='content-item'>
+        <view class='item-title'>
+          <view class='title-h3'>{{item.teacherName}}</view>
+          <view class='title-name'>{{item.studentName}}</view>
+          <view class='title-date text-lightgray'>{{item.className}}</view>
+          <view class='title-score'>{{item.score}}分</view>
+        </view>
+        <view class='item-title'>
+        <view class='title-date text-lightgray'>学周：{{item.week}}</view>
+          <view class='title-date text-lightgray'>{{item.createTime}}</view>
+        </view>
+        <view class='item-info text-gray'>
+          {{item.evaluationContent}}
+        </view>
+      </view>
+    </view>
+    <view class="weui-loadmore" hidden='{{loading}}' style='background: grey;text-align: center;'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">亲！已经没有更多了哦！</view>
+    </view>
+    <view class="body-view">
+      <loading hidden="{{hidding}}" bindchange="loadingChange">
+        加载中...
+      </loading>
+    </view>
+  </view>
+</view>

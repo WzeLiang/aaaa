@@ -1,0 +1,19 @@
+<view class='life'>
+     <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectData[index].merchantName}}</text>
+            <image class='select_img {{show&&"select_img_rotate"}}' src='../../../images/select-bottom.png'></image>         
+        </view>
+        <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*84):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' data-item='{{item}}' catchtap='optionTap'>{{item.merchantName}}</text>
+        </view>
+     </view>
+
+    <view class='box'>
+      <view  wx:for="{{imglist}}" class='item' id="{{item.itemId}}" catchtap='gotodetil'>
+         <!-- <image src='../../../images/education/school.gif'></image> -->
+        <image src='{{imgurl+item.imgUrl}}'></image>
+         <view class='text-center'>{{item.item}}</view>
+      </view>
+    </view>
+</view>

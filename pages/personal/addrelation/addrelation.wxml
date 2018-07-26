@@ -1,0 +1,32 @@
+<view class="addrelation">
+  <form class='addrelation-form' bindsubmit="addrelationsubmit">
+    <view class='form-item'>
+      <view class='text-gray'>姓名</view>
+      <input placeholder='请输入学生姓名' name='studentName' value="{{studentName}}" placeholder-class="input-placeholder" type='text' maxlength='5'></input>
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>学号</view>
+      <input placeholder='请输入学生编号' name='studentNumber' value="{{studentNumber}}" placeholder-class="input-placeholder" type='number' maxlength='11'></input>
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>学校</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{schoolarray}}"  range-key="{{'merchantName'}}" name='school' value="{{schoolarray[schoolindex].merchantName}}" bindchange="schoolSelected">
+        <text>{{schoolarray[schoolindex].merchantName}}</text>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>关系</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{parentarray}}" name='parentindex' value="{{parentindex}}" bindchange="parentSelected">
+        <text>{{parentarray[parentindex]}}</text>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>补充</view>
+      <input placeholder='请输入补充内容' name="remark" value="{{remark}}" placeholder-class="input-placeholder" type='text'></input>
+    </view>
+
+
+    <button formType="submit" class='sub-forget sub-button'>关联</button>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

@@ -1,0 +1,88 @@
+<!--pages/education/home/home.wxml-->
+<view class='education'>
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='pro-box'>
+    <view class="pro-item">
+      <navigator url='../attendance/attendance'>
+        <image src='../../../images/education/attence.png'></image>
+        <view>考勤</view>
+      </navigator>
+    </view>
+    <view class='pro-item'>
+      <navigator url='../../education/syllabus/syllabus'>
+        <image src='../../../images/education/syllabus.png'></image>
+        <view>班级课表</view>
+      </navigator>
+    </view>
+
+    <view class='pro-item {{isHmUpdated == 1 ? "unread" : ""}} '>
+      <navigator url='../homework/homework?isUpdate={{isHmUpdated}}'>
+        <image src='../../../images/education/homework.png'></image>
+        <view>家庭作业</view>
+      </navigator>
+    </view>
+
+    <view class='pro-item'>
+      <navigator url='../teacher/teacher'>
+        <image src='../../../images/education/teacher.png'></image>
+        <view>教师风采</view>
+      </navigator>
+    </view>
+    <view class='pro-item {{isLeaveUpdated == 1 && usertype == 2 ? "unread" : ""}}'>
+      <navigator wx:if="{{usertype == 1}}" url="../askforleave/askforleave">
+        <image src='../../../images/education/askleave.png'></image>
+        <view>在线请假</view>
+      </navigator>
+      <navigator wx:if="{{usertype == 2}}" url="../askforleave/leavelist/leavelist?isUpdate={{isLeaveUpdated}}">
+        <image src='../../../images/education/askleave.png'></image>
+        <view>在线请假</view>
+      </navigator>
+    </view>
+    <view class='pro-item'>
+      <navigator url='../live/live'>
+        <image src='../../../images/education/live.png'></image>
+        <view>校园直播</view>
+      </navigator>
+    </view>
+    <view class='pro-item'>
+      <navigator url='../glory/glory'>
+        <image src='../../../images/education/glory.png'></image>
+        <view>光荣榜</view>
+      </navigator>
+    </view>
+    <view class='pro-item {{isActivityUpdated == 1 ? "unread" : ""}}'>
+      <navigator url='../activity/activity?isUpdate={{isActivityUpdated}}'>
+        <image src='../../../images/education/activity.png'></image>
+        <view>活动报名</view>
+      </navigator>
+    </view>
+
+  </view>
+  <view class='class-msg'>
+    <view class='msg-head'>
+      <view class='title-h3 {{isClassAdviceUpdated == 1 ? "unread" : ""}}'>班级通知</view>
+      <view class='more'>
+        <navigator url='../classmsg/classmsg?isUpdate={{isClassAdviceUpdated}}'>
+          查看更多>
+        </navigator>
+      </view>
+    </view>
+    <view class='msg-content'>
+      <view class='content-item' wx:for="{{adviceList}}">
+        <view class='item-title'>
+          <view class='title-classnumb'>{{item.className}}</view>
+          <view class='title-date text-lightgray'>{{item.adviceDate}}</view>
+        </view>
+        <view class='item-info text-gray'>
+          {{item.adviceContent}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

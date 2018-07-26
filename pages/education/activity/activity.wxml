@@ -1,0 +1,66 @@
+
+
+<view class="activity" >
+<!--家长  -->
+    <view wx:if="{{usertype==1}}" class='tabnav' style="{{i?'position:fixed; top:0;width: 750rpx;':''}}" >
+        <view class='tab-item {{currentActive==index?"active":""}}' wx:for="{{tabnavlist0}}" wx:key="" bindtap='testclick' data-current="{{index}}">{{item}}</view>
+    </view>
+    <!--教师  -->
+    <view wx:if="{{usertype==2}}" class='tabnav' style="position:fixed; top:0;width: 750rpx;">
+        <view class='tab-item {{currentActive==index?"active":""}}' wx:for="{{tabnavlist1}}" wx:key="" bindtap='testclick' data-current="{{index}}">{{item}}</view>
+    </view>
+      <!--家长  -->
+     
+      <view class="loading-view" hidden='{{isHideFreshMore}}'>
+  <image src="../../../images/freshing.gif" class="loading-img"></image>
+  
+</view>
+      <view wx:if="{{usertype==1}}" wx:for="{{ tabcontentlist0}}" class='tab-content {{currentActive==index?"show":"hidden"}}' wx:key="" data-current="{{index}}" >
+          <!-- <view>索引{{index}}</view> -->
+          <view class='content-item' wx:for="{{item}}" wx:for-item="items" wx:key="" data-current="{{index1}}" >
+             <view class='item-msg text-black'>
+                 <view class='msg-title'>{{items.activityName}}</view>
+                 <view class='msg-activitydate text-gray'>活动时间：{{items.activityStarttime}} - {{items.activityEndtime}}</view>
+                 <view class='msg-joindata text-gray'>报名时间：{{items.applyStarttime}} - {{items.applyEndtime}}</view>
+                 <view class='msg-member text-gray'>参与对象：{{items.whose}}</view>
+             </view>
+             <view class='item-operate'>
+                <view wx-if="{{currentActive==0 }}" class='operate-btn'>
+                    <navigator url='./joinactivity/joinactivity?title={{items.activityName}}&activityId={{items.id}}' bindtap='update'>去报名</navigator>
+                </view>
+                 <view wx-if="{{currentActive==1}}" class='operate-username'>{{items.studentName}}</view>
+                  <view wx-if="{{currentActive==2}}" class='operate-stop  text-gray'>已结束</view>
+             </view>
+          </view>
+          
+          <view  hidden='{{isHideLoadMore}}' wx:if="{{currentActive==index}}">
+    <view>亲！已经没有更多了哦！</view>
+         </view>
+
+      </view >
+      <!--老师  -->
+       <view wx:if="{{usertype==2}}" wx:for="{{ tabcontentlist1}}" class='tab-content {{currentActive==index?"show":"hidden"}}' wx:key=""  >
+          <!-- <view>索引{{index}}</view> -->
+          <view class='content-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
+             
+             <view class='item-msg text-black'>
+                 <view class='msg-title'>{{items.activityName}}</view>
+                 <view class='msg-activitydate text-gray'>活动时间：{{items.activityStarttime}} - {{items.activityEndtime}}</view>
+                 <view class='msg-joindata text-gray'>报名时间：{{items.applyStarttime}} - {{items.applyEndtime}}</view>
+                 <view class='msg-member text-gray'>参与对象：{{items.whose}}</view>
+             </view>
+
+             <view class='item-operate' wx:if="{{currentActive==0}}">
+                <view class='operate-btn'>
+                    <navigator url='./userlist/userlist?title={{items.activityName}}&date={{items.activityStarttime}}&activityId={{items.id}}'>查看名单</navigator>
+                </view>
+                 
+             </view>
+          </view>
+           <view  hidden='{{isHideLoadMore}}' wx:if="{{currentActive==index}}">
+    
+    亲！已经没有更多了哦！
+         </view>
+      </view>
+      
+</view>

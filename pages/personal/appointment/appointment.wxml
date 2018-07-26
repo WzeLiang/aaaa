@@ -1,0 +1,268 @@
+<!--pages/personal/appointment/appointment.wxml-->
+<view class="syllabus">
+  <!--老师  -->
+    <view wx-if="{{memberType=='2'}}">
+
+
+      
+   <view class='content' >
+
+            <view class='content-date'>
+
+                <view class='pre' bindtap='preweek'>
+                    <image src='../../../images/icon-left.png'></image>
+                </view>
+
+                <view class='first-date text-black'>{{weekarr[0]}}</view>
+                <view class='text-black'>-</view>
+                 <view class='last-date text-black'>{{weekarr[6]}}</view>
+                <view class='next' bindtap='nextweek'>
+                     <image src='../../../images/icon-right.png'></image>
+                </view>
+
+            </view>
+
+
+
+           <view class='content-info text-black text-center'>
+
+
+
+
+
+
+
+                <view class='head-date tr-item' style='border:none;display:flex'>
+                        <view wx:for="{{daylist}}" class='th-item' style='height:100%;'>
+                      <view bindtap="changeDate" style="background-color: rgb(163, 221, 103)" wx:if='{{i==index}}' data-index='{{index}}' data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item.day}}</view>
+                       <view bindtap="changeDate" style="" wx:if='{{i!=index}}' data-index='{{index}}' data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item.day}}</view>
+                        </view>
+                         
+                </view>
+
+
+
+
+
+
+               <view class='head-date1 tr-item'  >
+                        <view wx:for="{{weeklist}}" class='th-item ' style='height:100%;'> 
+                          <view bindtap="changeDate" style="background-color: rgb(163, 221, 103)" wx:if='{{i==index}}' ata-index='{{index}}' data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                       <view bindtap="changeDate" style="" wx:if='{{i!=index}}' data-index='{{index}}' data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                        </view> 
+                </view>
+
+
+
+
+
+          <view class='head-date tr-item'  style = "">
+                        <view wx:for="{{weekTotal}}" class='th-item text-green' style='height:100%;'> 
+                       <view wx:if="{{item>=0 && index==i}}" style="background-color: rgb(163, 221, 103)" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                       <view wx:if="{{item>=0 && index!=i}}" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index]}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                         <view wx:if="{{item==-2}}" style='color:gray'>无预约</view>
+                         <view wx:if="{{item==-1}}" style="color:gray">已结束</view>
+                          
+                        </view>
+                </view>
+            
+
+
+
+
+
+
+
+      <view wx:for="{{appointment}}" style='border-bottom: 1rpx solid rgb(229, 229, 229)'>
+      <view style='display:flex;justify-content:space-between;font-size:35rpx;'>
+    
+        <view wx:if="{{item.type==1}}" > 家庭作业 </view>
+        <view wx:if="{{item.type==2}}"> 作息时间 </view>
+        <view> {{item.startTime + "-"+ item.endTime}} </view>
+      <view  bindtap='see' data-appointmentId = "{{item.id}}" style="color:blue;">{{item.appointmentCount + '位家长'}}></view>
+
+      </view>
+
+
+</view>
+
+
+
+            </view>
+         <button bindtap='send' class='sub-forget sub-button' >发布答疑</button>
+           <!-- <view style="position:fixed; top:1100rpx;width: 750rpx; text-align: center;" bindtap='send'>发布答疑</view> -->
+
+
+</view>
+
+
+</view>
+
+
+
+      <!--家长  -->
+      <view wx-if="{{memberType=='1'}}">
+        <view class='head'  >
+
+
+
+
+            <view class='tab tab-list back-green {{select?"ismiddle":"istop"}}'>
+            <view wx:for="{{studentlist}}" style="display:flex">
+ <view class="pro" bindtap='changestudent' data-studentId= "{{item.studentId}}" data-classId="{{item.classId}}" data-index ="{{index}}"><image src='{{item.profilePicture}}'  ></image> </view>
+            
+              <view class='class' >
+                  <view class='classnumb'>{{item.studentName}}</view>
+                  <view class='studentnumb'>{{item.className}}</view>
+              </view>
+            </view>
+              <view class='tabbtn' bindtap='selectitem' >
+                  <view class='img'>
+                      <image src='../../../images/tab.png'></image>
+                  </view>
+              </view>
+
+
+            </view>
+
+
+
+
+            <view class='tab tab-select back-green {{select?"isbottom":"ismiddle"}}'>
+<view class="pro"><image src='{{studentlist[proindex].profilePicture}}'></image> </view>
+              <view class='class1'  >
+                  <view class='classnumb'>{{studentlist[proindex].studentName}}</view>
+                  <view class='studentnumb'>{{studentlist[proindex].className}}</view>
+              </view>
+
+
+              <view class='tabbtn' bindtap='selectitem'>
+                  <view class='img'>
+                      
+                      <image src='../../../images/tab.png'></image>
+                  </view>
+              </view>
+
+
+            </view>
+
+
+
+        </view>
+
+
+
+
+
+        <view  class="yue" bindtap='showMyRecord'>预约记录</view>
+
+
+
+
+
+        <view class='content' >
+
+
+
+
+
+
+            <view class='content-date'>
+
+                <view class='pre' bindtap='preweek'>
+                    <image src='../../../images/icon-left.png'></image>
+                </view>
+
+                <view class='first-date text-black'>{{weekarr[0]}}</view>
+                <view class='text-black'>-</view>
+                 <view class='last-date text-black'>{{weekarr[6]}}</view>
+                <view class='next' bindtap='nextweek'>
+                     <image src='../../../images/icon-right.png'></image>
+                </view>
+
+            </view>
+
+
+
+
+
+
+
+
+
+           <view class='content-info text-black text-center'>
+
+
+
+
+
+
+
+                <view class='head-date tr-item' style='border:none;display:flex'>
+                        <view wx:for="{{daylist}}" class='th-item' style='height:100%;'>
+                      <view bindtap="changeDate" style="background-color: rgb(163, 221, 103)" wx:if='{{i==index}}' data-index='{{index}}' data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">{{item.day}}</view>
+                       <view bindtap="changeDate" style="" wx:if='{{i!=index}}' data-index='{{index}}' data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">{{item.day}}</view>
+                        </view>
+                         
+                </view>
+
+
+
+
+
+
+               <view class='head-date1 tr-item'  >
+                        <view wx:for="{{weeklist}}" class='th-item ' style='height:100%;'> 
+                          <view bindtap="changeDate" style="background-color: rgb(163, 221, 103)" wx:if='{{i==index}}' ata-index='{{index}}' data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                       <view bindtap="changeDate" style="" wx:if='{{i!=index}}' data-index='{{index}}' data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">{{item}}</view>
+                        </view> 
+                </view>
+
+
+
+
+
+          <view class='head-date tr-item'  style = "">
+                        <view wx:for="{{weekTotal}}" class='th-item text-green' style='height:100%;'> 
+                       <view wx:if="{{item.status==1 && index==i}}" style="background-color: rgb(163, 221, 103)" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">可预约</view>
+                       <view wx:if="{{item.status==1 && index!=i}}" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">可预约</view>
+                         <view wx:if="{{item.status==0}}" style="color:white">无预约</view>
+                         <view wx:if="{{item.status==-1}}" style="color:gray">已结束</view>
+                          <view wx:if="{{item.status==2 && index==i}}" style="background-color: rgb(163, 221, 103)" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">已预约</view>
+                       <view wx:if="{{item.status==2 && index!=i}}" data-index='{{index}}' bindtap="changeDate" data-status='{{weekTotal[index].status}}' data-weekarr="{{weekarr[index]}}">已预约</view>
+                        </view>
+                </view>
+            
+
+
+
+      <view wx:for="{{appointment}}" style='border-bottom: 1rpx solid rgb(229, 229, 229);'>
+      <view style='display:flex;margin:40rpx;justify-content:space-between;font-size:30rpx;' >
+      <view> {{item.teacherName}} </view>
+      <view wx:if="{{item.type==1}}"> 家庭作业 </view>
+      <view wx:if="{{item.type==2}}"> 作息时间 </view>
+      <view> {{item.startTime}}-{{item.endTime}} </view>
+     
+      </view>
+<view wx:if="{{item.isAppointment==false}}" bindtap='appoint' data-appointmentId = "{{item.id}}" style="color:blue"> 预约 </view>
+<view wx:if="{{item.isAppointment==true}}"> 已预约 </view>
+</view>
+
+
+
+
+
+            </view>
+
+           
+
+
+</view>
+
+
+        
+ 
+    </view>
+    
+</view>
+

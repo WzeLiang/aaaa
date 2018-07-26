@@ -1,0 +1,30 @@
+<view class="register">
+  <form class='register-form' bindsubmit="registersubmit">
+    <view class='form-item'>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='memberType' value="{{memberType}}" bindchange="listenerPickerSelected">
+        <text class='{{memberType == 0 ? "picker-text" :""}}'>{{array[memberType]}}</text>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <input placeholder='请输入您的手机号' bindinput='getphoneValue' placeholder-class="input-placeholder" type='number' name="phone" value='{{phone}}'></input>
+    </view>
+    <!--教师  -->
+    <view class='form-item' wx:if="{{memberType==2}}">
+      <input placeholder='请输入姓名' placeholder-class="input-placeholder" name='name' value='{{name}}' type='text'></input>
+    </view>
+    <view class='form-item' wx:if="{{memberType==2}}">
+      <input placeholder='请输入您的教师编号' placeholder-class="input-placeholder" name='teacherNumber' value='{{teacherNumber}}' type='number'></input>
+    </view>
+
+    <view class='form-item proving-code'>
+      <input placeholder='请输入验证码' placeholder-class="input-placeholder" name='verifyCode' value='{{verifyCode}}'></input>
+      <text class='take-provingcode {{flag == 1 ? "reset-code" : ""}}' bindtap='{{flag == 1 ? "" : "getverifyCode"}}'>{{timer ? timer : '获取验证码'}}</text>
+    </view>
+    <view class='form-item'>
+      <input placeholder='请输入密码' placeholder-class="input-placeholder" value='{{password}}' name='password' type='password'></input>
+    </view>
+    <view class='pass-tip'>密码为6-16位字母和数字</view>
+    <button formType="submit" class='sub-register sub-button'>确定</button>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

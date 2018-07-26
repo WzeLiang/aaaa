@@ -1,0 +1,22 @@
+<view class="forget">
+  <form class='forget-form' bindsubmit="forgetsubmit">
+    <view class='form-item'>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='memberType' value="{{index}}" bindchange="listenerPickerSelected">
+        <text class='{{index==0 ? "picker-text" : ""}}'>{{array[index]}}</text>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <input placeholder='请输入您的手机号' name='phone' bindinput='phoneInput' value="{{phone}}" placeholder-class="input-placeholder" type='number' maxlength='11'></input>
+    </view>
+    <view class='form-item verifycode'>
+      <input placeholder='请输入验证码' name="verifycode" value='{{verifycode}}' placeholder-class="input-placeholder"></input>
+      <text bindtap='{{flag == 1 ? "" : "getVerifyCode"}}' class='{{flag == 1 ? "countDown-text" : "take-verifycode"}}'>{{timer ? timer : '获取验证码'}}</text>
+    </view>
+    <view class='form-item'>
+      <input placeholder='请输入密码' name="password" value="{{password}}" placeholder-class="input-placeholder" type='password'></input>
+    </view>
+    <view class='pass-tip'>密码为6-16位字母和数字</view>
+    <button formType="submit" class='sub-forget sub-button'>确定</button>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

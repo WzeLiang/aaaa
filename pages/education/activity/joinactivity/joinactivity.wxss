@@ -1,0 +1,27 @@
+/* pages/education/activity/joinactivity/joinactivity.wxss */
+.joinactivity{
+
+}
+.joinactivity .acitvity-name{
+  padding: 20rpx 0;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.join-box{
+  padding: 0 30rpx;
+}
+.join-box .box-head{
+  margin: 20rpx 0 30rpx; 
+  font-size: 34rpx;
+}
+checkbox-group .checkbox-item{
+  margin-bottom:20rpx; 
+  font-size: 36rpx;
+}
+checkbox-group .checkbox-item .classnumb{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.operate-btn{
+  margin: 50rpx 0;
+}

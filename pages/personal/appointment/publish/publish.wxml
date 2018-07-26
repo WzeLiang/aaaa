@@ -1,0 +1,41 @@
+<view class="askforleave">
+  <form class='askforleave-form' bindsubmit="askforleavesubmit">
+    <view class='form-item'>
+      <view class='text-gray'>班级</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{className}}" name='clazz' value="{{classindex}}" bindchange="classSelected">
+      
+        <text >{{className[classindex]}}</text>
+      </picker>
+      
+      
+     
+    </view>
+    <view class='form-item'>
+      <view class='text-gray'>类型</view>
+      <picker mode="selector" placeholder-class="input-placeholder" range="{{array}}" name='type' value="{{typeindex}}" bindchange="typeSelected">
+        <text>{{array[typeindex]}}</text>
+      </picker>
+    </view>
+    
+    <view class='form-item'>
+        <view  class='text-gray'>开始时间</view>
+        <picker mode="selector" class='text-black' mode='time' placeholder-class="input-placeholder" range="" name='startdate' value="{{startdate}}" bindchange="startdateselect">
+            <text>{{startdate}}</text>
+       </picker>
+      </view>
+
+
+  
+      <view class='form-item'>
+        <view  class='text-gray'>结束时间</view>
+        <picker mode="selector" class='text-black' mode='time' placeholder-class="input-placeholder" range="" name='enddate' value="{{enddate}}" bindchange="enddateselect">
+            <text>{{enddate}}</text>
+       </picker>
+      </view>
+    
+
+
+    <button formType="submit" class='sub-forget sub-button'>发布答疑</button>
+  </form>
+</view>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

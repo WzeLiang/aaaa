@@ -1,0 +1,17 @@
+<!--pages/life/dynamic/dynamicinfo/dynamicinfo.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class='teacherinfo'>
+  <view class='img text-center'>
+    <view class='name text-center title-h3'>{{titleVo.title}}</view>
+  </view>
+  <view class='title-date text-lightgray' style='text-align: center;'>{{titleVo.publishDate}}</view>
+  <text class='duties' decode="{{true}}">\n 概要：&nbsp;&nbsp;{{titleVo.summary}}</text>
+  <text decode="{{true}}">\n \n</text>
+  <view class='explain'>
+    <import src="../../../../wxParse/wxParse.wxml" />
+    <view class="">
+      <!-- 这一块是富文本 显示的内容区 -->
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>

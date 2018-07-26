@@ -1,0 +1,25 @@
+/* pages/personal/addrelation/addrelation.wxss */
+
+.addrelation{
+  padding: 30rpx;
+}
+.form-item{
+  border-bottom: 1rpx solid rgb(229,229,229);
+  padding: 25rpx 0;
+  display: flex;
+  letter-spacing: 2rpx;
+  justify-content:space-between;
+}
+.form-item input{
+  direction: rtl;
+}
+.proving-code {
+  display: flex;
+  justify-content: space-between;
+}
+.take-provingcode{
+  color: rgb(119, 195, 41);
+}
+.sub-forget{
+   
+}
