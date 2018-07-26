@@ -28,9 +28,9 @@
         </view>
       <!--家长  -->
         <view class='head'  wx-if="{{memberType=='1'}}">
-            <scroll-view class='tab tab-list back-green {{select?"ismiddle":"istop"}}'>
-              <view class='class scroll-view-item' wx:for="{{studentlist}}" wx:key="index">
-                 <block bindtap='parentgetsyllabus' data-classid='{{item.classId}}' data-index='{{index}}'>
+            <view class='tab tab-list back-green {{select?"ismiddle":"istop"}}'>
+              <view class='class' wx:for="{{studentlist}}" wx:key="index">
+                 <view class='class-student' bindtap='parentgetsyllabus' data-classid='{{item.classId}}' data-index='{{index}}'>
                     <view class='student-img'>
                         <image src='http://192.168.212.29:9093{{item.profilePicture}}'></image>
                     </view>
@@ -38,20 +38,22 @@
                          <view class='classnumb'>{{item.studentName}}</view>
                          <view class='studentnumb'>{{item.className}}</view>
                     </view>
-                 </block>
+                 </view>
               </view>
 
-            </scroll-view>
+            </view>
 
             <view class='tab tab-select back-green {{select?"isbottom":"ismiddle"}}'>
-              <view class='class'>
-                 <view class='student-img'>
-                    <image src='http://192.168.212.29:9093{{studentlist[defaultstudentindex].profilePicture}}'></image>
-                 </view>
-                 <view class='student-msg'>
-                     <view class='classnumb'>{{studentlist[defaultstudentindex].studentName}}</view>
-                     <view class='studentnumb'>{{studentlist[defaultstudentindex].className}}</view>
-                 </view>
+              <view class='class '>
+                  <view class='class-student'>
+                       <view class='student-img'>
+                           <image src='http://192.168.212.29:9093{{studentlist[defaultstudentindex].profilePicture}}'></image>
+                       </view>
+                      <view class='student-msg'>
+                          <view class='classnumb'>{{studentlist[defaultstudentindex].studentName}}</view>
+                          <view class='studentnumb'>{{studentlist[defaultstudentindex].className}}</view>
+                      </view>
+                  </view>
               </view>
               <view class='tabbtn' bindtap='selectitem'>
                   <view class='img'>

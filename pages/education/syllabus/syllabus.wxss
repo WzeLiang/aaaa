@@ -7,14 +7,14 @@
 }
 .tab-list{
   position: absolute;
-  width: 2000rpx;
-  overflow-y: scroll
+
 }
 .tab-select{
  position: absolute;
 
 }
 .tab{
+  width: 100%;
   transition: all .5s ease;
   color: white;
   display: flex;
@@ -39,10 +39,8 @@
   height: 30rpx;
   vertical-align:middle;
 }
-.tab .class{
-  display: inline-block;
-  width:600rpx;
-  
+.tab .class .class-student{
+  display: flex;
 }
 .tab .class .student-img{
   width: 100rpx;
